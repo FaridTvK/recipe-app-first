@@ -9,6 +9,9 @@ import {
     deleteDoc,
 } from "firebase/firestore";
 
+
+
+
 const App = () => {
     const [recipes, setRecipes] = useState([]);
     const [form, setForm] = useState({
@@ -35,7 +38,6 @@ const App = () => {
                     };
                 })
             );
-            console.log(snapshot);
         });
     }, []);
 
@@ -148,7 +150,7 @@ const App = () => {
                 <div className="popup">
                     <div className="popup-inner">
                         <h2>Add a new recipe</h2>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} >
                             <div className="form-group">
                                 <label>Title</label>
                                 <input
